@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="deploy" name="Java Basic Web" basedir="..">
+	  <property name="target" value="D:\.desktop\apache-tomcat-6.0.44\webapps\java-web-app"/>
+    <target name="deploy">
+    	 <copy todir="${target}">
+    	            <fileset dir="${basedir}/WebContent">
+    	                <include name="**"/>
+    	                <exclude name=".svn"/>
+    	            </fileset>
+    	 </copy>
+    </target>
+</project>
