@@ -15,12 +15,22 @@ public class MainServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
  
-        PrintWriter out = resp.getWriter();
-        out.print("<h1>Hello Servlet</h1>");
-        out.print("<p>");
-        out.print(new Date());
-        out.print("</p>");
- 
+    		req.getRequestDispatcher("login.jsp").forward(req, resp);
+
     }
- 
+    
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    	if("Tom".equals(req.getParameter("username"))){
+    		req.setAttribute("name", req.getParameter("username"));
+    		req.getRequestDispatcher("admin-pane.jsp").forward(req, resp);
+    	} else {  	
+    		resp.getWriter().append("Access Forbidden");
+    	}
+    }
+// 
+    
+    public Date getDate(){
+    	return new Date();
+    }
 }

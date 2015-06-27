@@ -13,5 +13,15 @@
         <servlet-name>mainServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>adminServlet</servlet-name>
+        <servlet-class>com.sourceit.web.AdminServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>adminServlet</servlet-name>
+        <url-pattern>/admin/</url-pattern>
+    </servlet-mapping>
  
 </web-app>
