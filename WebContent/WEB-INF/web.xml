@@ -23,5 +23,25 @@
         <servlet-name>adminServlet</servlet-name>
         <url-pattern>/admin/</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>notesServlet</servlet-name>
+        <servlet-class>com.sourceit.web.notes.NotesServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>notesServlet</servlet-name>
+        <url-pattern>/notes</url-pattern>
+    </servlet-mapping>
+  
+    <servlet>
+        <servlet-name>dbNotesServlet</servlet-name>
+        <servlet-class>com.sourceit.web.notes.DBNotesServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>dbNotesServlet</servlet-name>
+        <url-pattern>/dbnotes</url-pattern>
+    </servlet-mapping>
  
 </web-app>
